@@ -1,8 +1,11 @@
 const removeFromArray = function(arr, ...args) {
-    for (const arg of args){
-        arr = arr.filter((item) => item !== arg);
-    }
-    return arr;
+    const newArr = [];
+    arr.forEach((item) => {
+        if (!args.includes(item)){
+            newArr.push(item);
+        }
+    })
+    return newArr;
 };
 
 // Do not edit below this line
